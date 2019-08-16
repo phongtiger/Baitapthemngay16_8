@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mang =[1,3,5,5,4,6,7,6,8,9,5,6];
+    function demSolan(arr,a) {
+        let dem = 0;
+        for (let i =0;i<arr.length;i++){
+            if(arr[i]==a){
+                dem++;
+            }
+        }
+        return dem;
+    }
+    let mangdem=[];
+    for (let i=0;i<mang.length; i++){
+        mangdem.push(demSolan(mang,mang[i]));
+    }
+    let max = mangdem[0];
+    for (let i = 1;i<mangdem.length;i++){
+        if(max<=mangdem[i]){
+            max = mangdem[i]
+        }
+    }
+    console.log(max);
+    for (let i=0; i< mang.length;i++){
+        if (max == demSolan(mang,mang[i])){
+            document.write(mang[i]+ "là số xuất hiện nhiều nhất"+"</br>")
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let km = parseInt(prompt("nhap vao so km : "));
+    let tien;
+    if (km>=30) {
+        tien = (km - 30) * 3000 + 30 * 4000 + 5000;
+    }  else if (1<km&&km<30){
+        tien = (km-1)*3000 + 5000;
+    }else if (km ==1){
+        tien = 5000;
+    }
+    document.write("so tien tra: "+tien);
+</script>
+</html>
